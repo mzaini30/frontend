@@ -1,3 +1,4 @@
+fs = require('fs')
 module.exports = function(eleventyConfig){
 	eleventyConfig.setBrowserSyncConfig({
 	  // scripts in body conflict with Turbolinks
@@ -11,7 +12,6 @@ module.exports = function(eleventyConfig){
 	  },
 	  callbacks: {
 	      ready: function(err, bs) {
-
 	        bs.addMiddleware("*", (req, res) => {
 	          const content_404 = fs.readFileSync('_site/404.html');
 	          // Provides the 404 content without redirect.
