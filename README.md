@@ -35,3 +35,11 @@ npm run build
 - slug(string)
 - tanggal() -> string
 - param() -> array
+
+## Loader
+
+Setting di dalam Alpine JS:
+
+```javascript
+isLoading = true
+```
