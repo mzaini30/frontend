@@ -25,6 +25,7 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-nunjucks-2-html": "^2.2.0",
     "live-server": "^1.2.1",
-    "nunjucks": "^3.2.2"
+    "nunjucks": "^3.2.2",
+    "tailwindcss": "^1.9.6"
   }
 }
