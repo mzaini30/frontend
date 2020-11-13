@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cd html && live-server & grunt",
     "build": "NODE_ENV=production npm run tailwind && grunt nunjucks",
-    "tailwind": "tailwindcss build tailwind.pcss -o _site/dist/tailwind.css"
+    "tailwind": "tailwindcss build tailwind.pcss -o html/dist/tailwind.css"
   },
   "repository": {
     "type": "git",
