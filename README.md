@@ -33,4 +33,5 @@ npm run build
 - acak(array)
 - clean(string)
 - slug(string)
-- tanggal()
+- tanggal() -> string
+- param() -> array
