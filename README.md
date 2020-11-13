@@ -11,7 +11,7 @@ npm i
 
 ## Yang Digunakan di Template Ini
 
-- 11ty
+- Nunjucks
 - Tailwind
 - Alpine
 - Turbolinks

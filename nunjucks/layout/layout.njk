@@ -1,8 +1,3 @@
----
-judul: Hello World
-deskripsi: Ini adalah template Frontend
----
-
 <!-- 
 
 	Website ini dibuat oleh Zen
@@ -12,9 +7,9 @@ deskripsi: Ini adalah template Frontend
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{{ judul }}</title>
+	<title>{% block judul %}Hello World{% endblock %}</title>
 	<meta charset="utf-8">
-	<meta name="description" content="{{ deskripsi }}">
+	<meta name="description" content="{% block deskripsi %}Ini adalah template Frontend{% endblock %}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="turbolinks-cache-control" content="no-cache">
 	<meta property="og:image" content="/dist/jean.jpg">
@@ -22,6 +17,7 @@ deskripsi: Ini adalah template Frontend
 	<link rel='stylesheet' href='/dist/remixicon/remixicon.css'>
 	<link rel="stylesheet" type="text/css" href="/dist/tailwind.css">
 	<link rel="stylesheet" type="text/css" href="/dist/progress.css">
+	<link rel="stylesheet" type="text/css" href="/dist/loading.css">
 	<link rel="stylesheet" type="text/css" href="/dist/global.css">
 	<script type="text/javascript" src="/dist/tools.js"></script>
 	<script type="text/javascript" src="/dist/turbolinks.js" defer=""></script>
@@ -37,6 +33,13 @@ deskripsi: Ini adalah template Frontend
 	</script>
 </head>
 <body>
-	{{ content | safe }}
+	<div x-data="{isLoading: false}">
+		<template x-if="isLoading">
+			<div class="progress-loading">
+			  <div class="indeterminate"></div>
+			</div>
+		</template>
+		{% block isi %}{% endblock %}
+	</div>
 </body>
 </html>
