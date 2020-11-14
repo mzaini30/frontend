@@ -9,6 +9,10 @@ degit mzaini30/frontend -f
 npm i
 ```
 
+## Alur
+
+nunjucks/ -> compile -> html/
+
 ## Yang Digunakan di Template Ini
 
 - Nunjucks
