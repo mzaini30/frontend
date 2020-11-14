@@ -8,13 +8,29 @@ module.exports = function(grunt) {
         paths: 'nunjucks'
       },
       render: {
-        files: [ {
+        files: [ 
+         {
           cwd: "nunjucks",
           src: "**/*.njk",
           dest: "html",
           expand: true,
-          ext: ".html"
-        } ]
+          ext: "/index.html"
+         },
+         {
+         	cwd: "nunjucks",
+         	src: "**/index.njk",
+         	dest: "html",
+         	expand: true,
+         	ext: ".html"
+         },
+         {
+         	cwd: "nunjucks",
+         	src: "**/404.html",
+         	dest: "html",
+         	expand: true,
+         	ext: ".html"
+         }
+        ]
       }
     },
 

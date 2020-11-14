@@ -5,7 +5,7 @@
   "main": "index.js", 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cd html && live-server & grunt",
+    "dev": "grunt & cd html && live-server",
     "build": "NODE_ENV=production npm run tailwind && grunt nunjucks",
     "tailwind": "tailwindcss build tailwind.pcss -o html/dist/tailwind.css"
   },
